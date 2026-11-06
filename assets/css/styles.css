@@ -454,7 +454,6 @@ ul {
     pointer-events: none;
     z-index: 9998;
 }
-
 .raindrop {
     position: absolute;
     top: -50px;
@@ -468,17 +467,14 @@ ul {
     );
     border-radius: 5px;
     opacity: 0.85;
-
     animation-name: rainFall;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
-
 @keyframes rainFall {
     from {
         transform: translateY(-50px);
     }
-
     to {
         transform: translateY(calc(100vh + 60px));
     }
