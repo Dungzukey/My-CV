@@ -449,6 +449,66 @@ ul {
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
+     /* --- Hiệu ứng mèo đi qua đi lại --- */
+
+.cat-parade {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    z-index: 9999;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.cat {
+    position: absolute;
+    font-size: 38px;
+    white-space: nowrap;
+    animation: catWalk 16s linear infinite alternate;
+}
+
+/* Mèo thứ nhất */
+.cat-1 {
+    bottom: 0;
+    animation-duration: 16s;
+}
+
+/* Mèo thứ hai */
+.cat-2 {
+    bottom: 8px;
+    animation-duration: 21s;
+    animation-delay: -5s;
+}
+
+/* Mèo thứ ba */
+.cat-3 {
+    bottom: 2px;
+    animation-duration: 19s;
+    animation-delay: -10s;
+}
+
+/* Chuyển động qua lại */
+@keyframes catWalk {
+    0% {
+        left: -60px;
+        transform: scaleX(1);
+    }
+
+    49% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(-1);
+    }
+
+    100% {
+        left: calc(100% + 60px);
+        transform: scaleX(-1);
+    }
+   {
     transition: none !important;
     scroll-behavior: auto !important;
   }
