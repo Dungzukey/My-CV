@@ -480,6 +480,45 @@ ul {
     }
 
     to {
+       .name-animation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin: 30px auto;
+    font-size: clamp(28px, 5vw, 55px);
+    font-weight: 900;
+    color: #087F70;
+    text-shadow: 0 4px 15px rgba(8, 127, 112, 0.25);
+}
+
+.name-letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-100px) scale(0.4);
+    animation: letterJump 0.8s cubic-bezier(.2, .8, .3, 1.5) forwards;
+}
+
+@keyframes letterJump {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px) scale(0.4);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(15px) scale(1.2);
+    }
+
+    80% {
+        transform: translateY(-8px) scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
         transform: translateY(calc(100vh + 60px));
     }
 }
