@@ -513,3 +513,48 @@ ul {
     scroll-behavior: auto !important;
   }
 }
+     .cat-parade {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.walking-cat {
+    position: absolute;
+    width: 95px;
+    height: auto;
+    bottom: 0;
+    animation: catMove 15s linear infinite alternate;
+}
+
+.cat-one {
+    animation-duration: 15s;
+}
+
+.cat-two {
+    width: 75px;
+    bottom: 5px;
+    animation-duration: 21s;
+    animation-delay: -5s;
+}
+
+.cat-three {
+    width: 110px;
+    bottom: 0;
+    animation-duration: 18s;
+    animation-delay: -9s;
+}
+
+@keyframes catMove {
+    from {
+        left: -120px;
+    }
+    to {
+        left: calc(100% + 120px);
+    }
+}
