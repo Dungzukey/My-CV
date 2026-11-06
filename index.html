@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!-- lang="vi" khai báo ngôn ngữ trang → hỗ trợ screen reader & SEO -->
 <html lang="vi">
-
 <head>
   <!-- ========== METADATA BẮT BUỘC ========== -->
   <meta charset="UTF-8" />
@@ -22,7 +21,6 @@
 </div>
   <!-- Hiệu ứng mưa rơi -->
 <div id="rain-container"></div>
-
 <script>
 const rainContainer = document.getElementById("rain-container");
 
@@ -36,12 +34,10 @@ for (let i = 0; i < 180; i++) {
     drop.style.animationDelay = Math.random() * 5 + "s";
     drop.style.height = (10 + Math.random() * 20) + "px";
     drop.style.opacity = 0.3 + Math.random() * 0.6;
-
     rainContainer.appendChild(drop);
 }
 </script>
 <body>
-
   <!-- ========================================================== -->
   <!-- HEADER: nhận diện + điều hướng chính                        -->
   <!-- ========================================================== -->
@@ -52,7 +48,6 @@ for (let i = 0; i < 180; i++) {
         <span class="brand-mark" aria-hidden="true">A</span>
         <span class="brand-name">Ngô Mạnh Dũng</span>
       </a>
-
       <!-- NAV dùng Flexbox (xem styles.css) -->
       <nav class="main-nav" aria-label="Điều hướng chính">
         <ul class="nav-list">
@@ -64,7 +59,6 @@ for (let i = 0; i < 180; i++) {
       </nav>
     </div>
   </header>
-
   <!-- ========================================================== -->
   <!-- MAIN: toàn bộ nội dung chính của trang                      -->
   <!-- ========================================================== -->
@@ -86,7 +80,6 @@ for (let i = 0; i < 180; i++) {
             <a class="btn btn-outline" href="#contact">Liên hệ ngay</a>
           </div>
         </div>
-
         <figure class="hero-avatar">
           <img
             src="./assets/img/avat tôi.jpg"
@@ -95,13 +88,11 @@ for (let i = 0; i < 180; i++) {
         </figure>
       </div>
     </section>
-
     <!-- ----- SECTION: Kỹ năng ----- -->
     <section id="skills" class="section">
       <div class="container">
         <h2 class="section-title">Kỹ năng</h2>
         <p class="section-sub">Những công nghệ và kỹ năng tôi sử dụng thường xuyên.</p>
-
         <ul class="skill-grid">
           <li class="skill-chip"> wod </li>
           <li class="skill-chip">java</li>
@@ -112,16 +103,13 @@ for (let i = 0; i < 180; i++) {
         </ul>
       </div>
     </section>
-
     <!-- ----- SECTION: Dự án (danh sách thẻ dùng CSS Grid) ----- -->
     <section id="projects" class="section section-muted">
       <div class="container">
         <h2 class="section-title">Dự án thành công</h2>
         <p class="section-sub">Một vài sản phẩm tôi đã thực hiện.</p>
-
         <!-- .project-grid dùng CSS Grid (xem styles.css) -->
         <div class="project-grid">
-
           <!-- Mỗi thẻ là một <article> độc lập, có thể đứng riêng -->
           <article class="card">
             <img class="card-media"
@@ -140,7 +128,6 @@ for (let i = 0; i < 180; i++) {
               <a class="card-link" href="https://www.youtube.com">Xem chi tiết →</a>
             </div>
           </article>
-
           <article class="card">
             <img class="card-media"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ06skMsqZVfvQtpn7-T8cxiuu9c6fJLJcinTsGVlikDg&s=10"
@@ -157,7 +144,6 @@ for (let i = 0; i < 180; i++) {
               <a class="card-link" href="#">Xem chi tiết →</a>
             </div>
           </article>
-
           <article class="card">
             <img class="card-media"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6pSeFWKl3LuN2JnCl0_m4Lw8TBvvoXeOUrMdfIvKqkA&s=10"
@@ -174,7 +160,6 @@ for (let i = 0; i < 180; i++) {
               <a class="card-link" href="#">Xem chi tiết →</a>
             </div>
           </article>
-
           <article class="card">
             <img class="card-media"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXzazL2O0xLV3Jji2S1ide5pXFV3v4EdJVetzElY9Suw&s=10"
@@ -191,7 +176,6 @@ for (let i = 0; i < 180; i++) {
               <a class="card-link" href="#">Xem chi tiết →</a>
             </div>
           </article>
-
         </div><!-- /.project-grid -->
       </div>
     </section>
