@@ -20,12 +20,26 @@
     <img src="assets/img/meo-di-bo.gif" class="walking-cat cat-two">
     <img src="assets/img/meo-di-bo.gif" class="walking-cat cat-three">
 </div>
-  <!-- Những chú mèo đi dạo -->
-<div class="cat-parade">
-    <div class="cat cat-1">cat</div>
-    <div class="cat cat-2">cat</div>
-    <div class="cat cat-3">cat</div>
-</div>
+  <!-- Hiệu ứng mưa rơi -->
+<div id="rain-container"></div>
+
+<script>
+const rainContainer = document.getElementById("rain-container");
+
+for (let i = 0; i < 180; i++) {
+    const drop = document.createElement("span");
+
+    drop.classList.add("raindrop");
+
+    drop.style.left = Math.random() * 100 + "vw";
+    drop.style.animationDuration = (0.6 + Math.random() * 1.5) + "s";
+    drop.style.animationDelay = Math.random() * 5 + "s";
+    drop.style.height = (10 + Math.random() * 20) + "px";
+    drop.style.opacity = 0.3 + Math.random() * 0.6;
+
+    rainContainer.appendChild(drop);
+}
+</script>
 <body>
 
   <!-- ========================================================== -->
