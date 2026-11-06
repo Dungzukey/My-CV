@@ -13,24 +13,17 @@
   <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
  <div id="rain-container"></div>
-
 <script>
 const container = document.getElementById("rain-container");
-
 for (let i = 0; i < 300; i++) {
     const drop = document.createElement("span");
-
     drop.className = "raindrop";
-
     const speed = 0.5 + Math.random() * 0.7;
-
     drop.style.left = Math.random() * 100 + "vw";
     drop.style.height = (15 + Math.random() * 25) + "px";
     drop.style.width = (1 + Math.random() * 2) + "px";
-
     drop.style.animationDuration = speed + "s";
     drop.style.animationDelay = -(Math.random() * speed) + "s";
-
     container.appendChild(drop);
 }
 </script>
