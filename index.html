@@ -12,6 +12,23 @@
   <!-- Liên kết tới file CSS tách rời (yêu cầu của bài) -->
   <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
+  <div class="name-animation" id="myName"></div>
+
+<script>
+const name = "NGÔ MẠNH DŨNG";
+const container = document.getElementById("myName");
+
+name.split("").forEach((letter, index) => {
+    const span = document.createElement("span");
+
+    span.textContent = letter === " " ? "\u00A0" : letter;
+    span.classList.add("name-letter");
+
+    span.style.animationDelay = (index * 0.18) + "s";
+
+    container.appendChild(span);
+});
+</script>
   <div id="rain-container"></div>
 
 <script>
