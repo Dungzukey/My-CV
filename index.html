@@ -12,28 +12,18 @@
   <!-- Liên kết tới file CSS tách rời (yêu cầu của bài) -->
   <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
-  <!-- Hiệu ứng mưa rơi -->
-<div id="rain-container"></div>
-  <div class="cat-parade">
-    <img src="assets/img/meo-di-bo.gif" class="walking-cat cat-one">
-    <img src="assets/img/meo-di-bo.gif" class="walking-cat cat-two">
-    <img src="assets/img/meo-di-bo.gif" class="walking-cat cat-three">
-</div>
-  <!-- Hiệu ứng mưa rơi -->
-<div id="rain-container"></div>
+  <div id="rain-container"></div>
 <script>
 const rainContainer = document.getElementById("rain-container");
 
-for (let i = 0; i < 180; i++) {
+for (let i = 0; i < 250; i++) {
     const drop = document.createElement("span");
 
-    drop.classList.add("raindrop");
-
+    drop.className = "raindrop";
     drop.style.left = Math.random() * 100 + "vw";
-    drop.style.animationDuration = (0.6 + Math.random() * 1.5) + "s";
-    drop.style.animationDelay = Math.random() * 5 + "s";
-    drop.style.height = (10 + Math.random() * 20) + "px";
-    drop.style.opacity = 0.3 + Math.random() * 0.6;
+    drop.style.animationDuration = (0.5 + Math.random() * 1.5) + "s";
+    drop.style.animationDelay = Math.random() * -5 + "s";
+    drop.style.height = (15 + Math.random() * 25) + "px";
     rainContainer.appendChild(drop);
 }
 </script>
