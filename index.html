@@ -15,29 +15,24 @@
   <div id="rain-container"></div>
 
 <script>
-(function () {
-    const container = document.getElementById("rain-container");
+const container = document.getElementById("rain-container");
 
-    if (!container) return;
+for (let i = 0; i < 300; i++) {
+    const drop = document.createElement("span");
 
-    container.innerHTML = "";
+    drop.className = "raindrop";
 
-    for (let i = 0; i < 300; i++) {
-        const drop = document.createElement("span");
+    const speed = 0.5 + Math.random() * 0.7;
 
-        drop.className = "raindrop";
-        drop.style.left = Math.random() * 100 + "vw";
-        drop.style.height = (15 + Math.random() * 25) + "px";
+    drop.style.left = Math.random() * 100 + "vw";
+    drop.style.height = (15 + Math.random() * 25) + "px";
+    drop.style.width = (1 + Math.random() * 2) + "px";
 
-        const speed = 0.45 + Math.random() * 0.5;
-        drop.style.animationDuration = speed + "s";
-        drop.style.animationDelay = -(Math.random() * speed) + "s";
-        drop.style.opacity = 0.5 + Math.random() * 0.5;
-        drop.style.width = (1.5 + Math.random() * 1.5) + "px";
+    drop.style.animationDuration = speed + "s";
+    drop.style.animationDelay = -(Math.random() * speed) + "s";
 
-        container.appendChild(drop);
-    }
-})();
+    container.appendChild(drop);
+}
 </script>
 <body>
   <!-- ========================================================== -->
