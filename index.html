@@ -13,19 +13,31 @@
   <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
   <div id="rain-container"></div>
+
 <script>
-const rainContainer = document.getElementById("rain-container");
+(function () {
+    const container = document.getElementById("rain-container");
 
-for (let i = 0; i < 250; i++) {
-    const drop = document.createElement("span");
+    if (!container) return;
 
-    drop.className = "raindrop";
-    drop.style.left = Math.random() * 100 + "vw";
-    drop.style.animationDuration = (0.5 + Math.random() * 1.5) + "s";
-    drop.style.animationDelay = Math.random() * -5 + "s";
-    drop.style.height = (15 + Math.random() * 25) + "px";
-    rainContainer.appendChild(drop);
-}
+    container.innerHTML = "";
+
+    for (let i = 0; i < 300; i++) {
+        const drop = document.createElement("span");
+
+        drop.className = "raindrop";
+        drop.style.left = Math.random() * 100 + "vw";
+        drop.style.height = (15 + Math.random() * 25) + "px";
+
+        const speed = 0.45 + Math.random() * 0.5;
+        drop.style.animationDuration = speed + "s";
+        drop.style.animationDelay = -(Math.random() * speed) + "s";
+        drop.style.opacity = 0.5 + Math.random() * 0.5;
+        drop.style.width = (1.5 + Math.random() * 1.5) + "px";
+
+        container.appendChild(drop);
+    }
+})();
 </script>
 <body>
   <!-- ========================================================== -->
