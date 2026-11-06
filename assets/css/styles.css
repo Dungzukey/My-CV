@@ -480,16 +480,6 @@ ul {
     }
 
     to {
-       .name-animation {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 3px;
-    margin: 30px auto;
-    font-size: clamp(28px, 5vw, 55px);
-    font-weight: 900;
-    color: #087F70;
-    text-shadow: 0 4px 15px rgba(8, 127, 112, 0.25);
+        transform: translateY(calc(100vh + 60px));
+    }
 }
-
-
